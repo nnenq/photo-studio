@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Kirciu Travel</title>
+    <link rel="stylesheet" href="~/css/shared.css" />
+    <link rel="stylesheet" href="~/css/home.css" />
+</head>
+<body>
+    <header class="header-top">
+        <div class="container">
+            <div class="logo">
+                <a href="@Url.Action("Index", "Home")">
+                    <span class="logo-icon">📸</span>
+                    <span class="logo-text">StudioRent</span>
+                </a>
+            </div>
+            <div class="button-header">
+                <button class="button-login" id="click-to-hide">Войти</button>
+                <button class="button-registration">Регистрация</button>
+            </div>
+        </div>
+    </header>
+
+    <header class="header-bottom">
+        <div class="container">
+            <nav class="menu">
+                <a href="@Url.Action("Index", "Home")">Главная</a>
+                <a href="@Url.Action("SiteInformation", "Home")">О платформе</a>
+                <a href="#">Каталог студий</a>
+                <a href="#">Мои бронирования</a>
+                <a href="#">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StudioRent</h3>
+                    <p>Лучшие фотостудии для вашего творчества</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>📧 info@studiorent.com</p>
+                    <p>📱 +373 XXX XXX XX</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Следите за нами</h4>
+                    <p>Instagram | Facebook | VK</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StudioRent. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/js/shared_script.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
